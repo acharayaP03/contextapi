@@ -1,4 +1,4 @@
-# React contect api
+# React context api
 
 This project is practise project with context api.
 
