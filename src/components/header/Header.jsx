@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { PostContext } from '../../App';
+import { PostContext } from '../../context/PostContext';
 export default function Header() {
 	const { onClearPosts } = useContext(PostContext);
 	return (
