@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import List from './List';
 
 function Posts() {

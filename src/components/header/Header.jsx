@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { PostContext } from '../../App';
+import { PostContext, usePosts } from '../../context/PostContext';
 export default function Header() {
-	const { onClearPosts } = useContext(PostContext);
+	const { onClearPosts } = usePosts();
 	return (
 		<header>
 			<h1>
@@ -17,12 +17,12 @@ export default function Header() {
 }
 
 function Results() {
-	const { posts } = useContext(PostContext);
+	const { posts } = usePosts();
 	return <p>🚀 {posts.length} atomic posts found</p>;
 }
 
 function SearchPosts() {
-	const { searchQuery, setSearchQuery } = useContext(PostContext);
+	const { searchQuery, setSearchQuery } = usePosts();
 	return (
 		<input
 			value={searchQuery}
