@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react';
+import { useState, createContext, useContext } from 'react';
 import { createRandomPost } from '../utils';
 
 // create context outside of the component so that it will not be created every time the component re-renders
@@ -37,4 +37,13 @@ export function PostProvider({ children }) {
 			{children}
 		</PostContext.Provider>
 	);
+}
+
+// creating custom useContex hook
+export function usePosts() {
+	const context = usePosts();
+	if (!context) {
+		throw new Error('usePost must be used within a PostProvider');
+	}
+	return context;
 }
