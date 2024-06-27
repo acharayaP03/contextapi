@@ -41,7 +41,7 @@ export function PostProvider({ children }) {
 
 // creating custom useContex hook
 export function usePosts() {
-	const context = usePosts();
+	const context = useContext(PostContext);
 	if (!context) {
 		throw new Error('usePost must be used within a PostProvider');
 	}
